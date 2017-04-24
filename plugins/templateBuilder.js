@@ -4,7 +4,8 @@ const Handlebars = require('handlebars');
 const each = require('async/each');
 const mkdir = require('mkdirp');
 
-Handlebars.registerHelper('reduce', number => number / (3 * 2));
+Handlebars.registerHelper('reduce', number => number * (2 / 3));
+Handlebars.registerHelper('toJSON', obj => JSON.stringify(obj));
 
 class TemplateBuilder {
   constructor(svgList) {
